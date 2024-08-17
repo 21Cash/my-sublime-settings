@@ -1,0 +1,29 @@
+<snippet>
+<!--
+    Fields: $field_number or ${field_number:default_text}, e.g. $1 or ${1:name}
+    Variables: $variable or ${variable/regex/replace/flags}, e.g. $TM_FILEPATH
+    More: https://www.sublimetext.com/docs/completions.html#snippets
+-->
+<content><![CDATA[
+vector<vector<int>> transpose(const vector<vector<int>> &grid) {
+    int rows = grid.size();
+    if (rows == 0) return {};
+    int cols = grid[0].size();
+    
+    vector<vector<int>> transposed(cols, vector<int>(rows));
+    
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            transposed[j][i] = grid[i][j];
+        }
+    }
+    
+    return transposed;
+}
+
+
+]]></content>
+<tabTrigger>_transpose</tabTrigger>
+<description>Tranpose the matrix</description>
+<scope>source.c++</scope>
+</snippet>

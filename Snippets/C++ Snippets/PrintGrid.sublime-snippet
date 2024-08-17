@@ -16,6 +16,6 @@ void print_grid(vector<vector<int>> &grid) {
 }
 ]]></content>
 <tabTrigger>_printGrid</tabTrigger>
-<description>Print the 2D Vector</description>
+<description>Prints the 2D Vector</description>
 <scope>source.c++</scope>
 </snippet>

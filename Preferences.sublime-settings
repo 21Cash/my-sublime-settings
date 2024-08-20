@@ -1,10 +1,9 @@
 {
-	"color_scheme": "Packages/Devastate/Devastate.tmTheme",
+	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 	"ignored_packages":
 	[
 		"Vintage",
 	],
-	"translate_tabs_to_spaces": true,
 	"index_files": true,
 	"theme": "Default Dark.sublime-theme",
 	"trim_automatic_white_space": false,

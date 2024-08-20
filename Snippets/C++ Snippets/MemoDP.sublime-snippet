@@ -1,0 +1,18 @@
+<snippet>
+<!--
+    Fields: $field_number or ${field_number:default_text}, e.g. $1 or ${1:name}
+    Variables: $variable or ${variable/regex/replace/flags}, e.g. $TM_FILEPATH
+    More: https://www.sublimetext.com/docs/completions.html#snippets
+-->
+<content><![CDATA[
+
+if(${1:} != -1) return $1;
+
+
+return $1 ${2:= res}; $3
+
+]]></content>
+<tabTrigger>_memodp</tabTrigger>
+<description>Memoization Snippet For Top Down DP</description>
+<scope>source.c++, meta.function.c++, meta.block.c++</scope>
+</snippet>

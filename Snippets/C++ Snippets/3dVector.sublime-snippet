@@ -1,0 +1,14 @@
+<snippet>
+<!--
+    Fields: $field_number or ${field_number:default_text}, e.g. $1 or ${1:name}
+    Variables: $variable or ${variable/regex/replace/flags}, e.g. $TM_FILEPATH
+    More: https://www.sublimetext.com/docs/completions.html#snippets
+-->
+<content><![CDATA[
+vector<vector<vector<${1:/*Type*/}>>> ${2:/*VecName*/}(${3:/*D1 size*/}, vector<vector<${1:/*Type*/}>>(${4:/*D2 size*/}, vector<${1:/*Type*/}>(${5:/*D3 size*/}, ${6:/*Default Value*/})));
+
+]]></content>
+<tabTrigger>_3dVector</tabTrigger>
+<description>3D Vector Declaration</description>
+<scope>source.c++</scope>
+</snippet>

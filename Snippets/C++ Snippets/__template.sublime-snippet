@@ -29,24 +29,26 @@ using namespace std;
 // Library Source - https://github.com/21Cash/Competitive-Programming/tree/main/Library
 
 #ifdef CASH_LOCAL
-#include "Debug.hpp"
+    #include "Debug.hpp"
 #endif
 
 #pragma region Utilities
 
 #ifndef DEBUG_OUT
-#define dout if (false) std::cout
-#define db(x...) 
-#define dbg(x...)
-#define f_dbg(x...)
+    #define dout if (false) std::cout
+    #define db(x...) 
+    #define dbg(x...)
+    #define f_dbg(x...)
 #endif
 
 using ll =  long long;
 using ull = unsigned long long;
 
 #define all(C) C.begin(), C.end()
+#define rev_all(C) C.rbegin(), C.rend()
 #define get_unique(v) {sort(v.begin(), v.end()); v.erase(unique(v.begin(), v.end()), v.end());}
 #define sz(C) (int) C.size() 
+#define pop_count(x) __builtin_popcountll(x)
 
 template<class Fun> class y_combinator_result { Fun fun_;
 public:
@@ -86,8 +88,10 @@ signed main() {
     // freopen("output.txt", "w", stdout);
     // freopen("error.txt", "w", stderr);
     
+    #ifndef CASH_LOCAL
     ios::sync_with_stdio(false);
     cin.tie(0); 
+    #endif
     
     int t = 1;
     if(!single_tc) cin >> t;

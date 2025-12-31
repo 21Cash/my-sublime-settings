@@ -1,0 +1,37 @@
+<snippet>
+<!--
+    Fields: $field_number or ${field_number:default_text}, e.g. $1 or ${1:name}
+    Variables: $variable or ${variable/regex/replace/flags}, e.g. $TM_FILEPATH
+    More: https://www.sublimetext.com/docs/completions.html#snippets
+-->
+<content><![CDATA[
+vector<pair<int, int>> merge_intervals(vector<pair<int, int>> intervals) {
+    sort(intervals.begin(), intervals.end());
+
+    auto [prevStart, prevEnd] = intervals[0];
+    int N = intervals.size();
+
+    vector<pair<int, int>> res;
+    
+    for(int i = 1; i < N; i++) {
+        auto [currentStart, currentEnd] = intervals[i];
+
+        if(currentStart >= prevStart && currentStart <= prevEnd) {
+            prevEnd = max(currentEnd, prevEnd);
+        }
+        else {
+            res.push_back({prevStart, prevEnd});
+            prevStart = currentStart;
+            prevEnd = currentEnd;
+        }
+    }
+
+    res.push_back({prevStart, prevEnd});
+    return res;
+}
+
+]]></content>
+<tabTrigger>_mergeIntervals</tabTrigger>
+<description>Merge Intervals</description>
+<scope>source.c++</scope>
+</snippet>

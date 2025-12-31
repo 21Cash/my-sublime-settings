@@ -1,0 +1,40 @@
+<snippet>
+<!--
+    Fields: $field_number or ${field_number:default_text}, e.g. $1 or ${1:name}
+    Variables: $variable or ${variable/regex/replace/flags}, e.g. $TM_FILEPATH
+    More: https://www.sublimetext.com/docs/completions.html#snippets
+-->
+<content><![CDATA[
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+
+bool multiple_testcases = ${0:false};
+
+void test_case(int tc) {
+    
+    $1
+    
+}
+
+
+signed main() {
+    
+    int test_cases = 1;
+    if(multiple_testcases) cin >> test_cases;
+    
+    for(int tc = 0; tc < test_cases; tc++) {
+        test_case(tc);
+    }
+    
+    return 0;
+}
+
+
+
+]]></content>
+<tabTrigger>_basictemplate</tabTrigger>
+<description>Basic Template Code</description>
+<scope>source.c++, meta.preprocessor.include.c++, keyword.control.import.include.c++</scope>
+</snippet>

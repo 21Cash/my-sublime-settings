@@ -5,18 +5,6 @@
     More: https://www.sublimetext.com/docs/completions.html#snippets
 -->
 <content><![CDATA[
-#include <bits/stdc++.h>
-using namespace std;
-
-#pragma region
-
-$1template<class Fun> class y_combinator_result { Fun fun_;
-public:
-    template<class T> explicit y_combinator_result(T &&fun): fun_(std::forward<T>(fun)) {}
-    template<class ...Args> decltype(auto) operator()(Args &&...args) { return fun_(std::ref(*this), std::forward<Args>(args)...); }
-};
-template<class Fun> decltype(auto) y_combinator(Fun &&fun) { return y_combinator_result<std::decay_t<Fun>>(std::forward<Fun>(fun)); }
-
 // --------------------------------------------- Leetcode Debug Template -------------------------------------------------------------
 
 #define new_line_count 2 // How many new lines after each debug ?
@@ -64,25 +52,8 @@ template <typename T, typename... V> void _print(T t, V... v) {__print(t); if (s
 
 // --------------------------------------------------------------------------------------------------------------------------------
 
-using ll = long long;
-
-#define all(C) C.begin(), C.end()
-#define rev_all(C) C.rbegin(), C.rend()
-#define get_unique(v) {sort(v.begin(), v.end()); v.erase(unique(v.begin(), v.end()), v.end());}
-#define pop_count(x) __builtin_popcountll(x)
-
-ll POW(ll a, ll b) { return a <= 0 || b < 0 ? 0 : (b == 0 ? 1 : (b % 2 ? a * POW(a, b - 1) : POW(a * a, b / 2))); }
-ll GCD(ll x, ll y) { if (x == 0) return y; if (y == 0) return x; return GCD(y, x % y); }
-ll LCM(ll a,ll b) { return a * b / GCD(a, b); }
-ll ceil_div(ll x, ll y) { assert(y != 0); return (x + y - 1) / y; }
-ll floor_div(ll x, ll y) { assert(y != 0); if (y < 0) { y = -y; x = -x; } if (x >= 0) return x / y; return (x + 1) / y - 1; }
-bool is_even(ll x) { return (x % 2 == 0); }
-bool is_odd(ll x) { return (x % 2 == 1); }
-#pragma endregion
-
-$0
 ]]></content>
-<tabTrigger>_leetcodetemplate</tabTrigger>
-<description>Template Code for Leetcode</description>
-<scope>source.c++, meta.preprocessor.include.c++, keyword.control.import.include.c++</scope>
+<tabTrigger>_lcdebug</tabTrigger>
+<description>Debug Template For Leetcode</description>
+<scope>source.c++, comment.line.double-slash.c, punctuation.definition.comment.c</scope>
 </snippet>

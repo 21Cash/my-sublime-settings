@@ -7,8 +7,8 @@
 #define d_stream std::cout
 
 #ifdef CASH_LOCAL
-#define DEBUG_OUT
-#define DEBUG_TC_NUM
+	#define DEBUG_OUT
+	#define DEBUG_TC_NUM
 #endif 
 
 #define dout if (false) std::cout

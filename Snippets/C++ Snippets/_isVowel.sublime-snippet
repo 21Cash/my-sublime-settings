@@ -1,0 +1,17 @@
+<snippet>
+<!--
+    Fields: $field_number or ${field_number:default_text}, e.g. $1 or ${1:name}
+    Variables: $variable or ${variable/regex/replace/flags}, e.g. $TM_FILEPATH
+    More: https://www.sublimetext.com/docs/completions.html#snippets
+-->
+<content><![CDATA[
+char isVowel(char ch) {
+    ch = tolower(ch);
+    return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+}
+
+]]></content>
+<tabTrigger>_isVowel</tabTrigger>
+<description>Checks whether given char is a vowel</description>
+<scope>source.c++, storage.type.c</scope>
+</snippet>
